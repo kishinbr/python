@@ -29,6 +29,8 @@ class Stack:
             raise ValueError("stack is empty")
         return self.top.data
 
+
+
     def display(self):
         if self.top is None:
             raise ValueError("stack is empty")

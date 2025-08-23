@@ -131,26 +131,22 @@ class LinkedList:
             self.head = Node(value)
 
     def remove_element_by_value(self, value):
-
         if self.head is None:
             raise ValueError("The list is empty")
 
         current_node = self.head
         index = 0
 
-       
         if current_node.data == value:
             self.head = current_node.next
             return index
 
-        
         while current_node.next:
             index += 1
             if current_node.next.data == value:
                 current_node.next = current_node.next.next
                 return index
             current_node = current_node.next
-
         raise ValueError(f"{value} was not found in the list")
 
     
